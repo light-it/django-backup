@@ -57,6 +57,6 @@ class Command(BaseCommand):
         return media_path
 
     def replace_media(self, local_path, backup_dir):
-        cmd = u'mv -f %s/* %s' % (backup_dir, local_path)
+        cmd = u'cp -rf %s/* %s' % (backup_dir, local_path)
         print '\t', cmd
         os.system(cmd)
